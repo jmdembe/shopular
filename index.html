@@ -15,10 +15,16 @@
           <th>Quantity</th>
           <th>Color</th>
         </tr>
-        <tr></tr>
+        <tr ng-repeat='product in item.inventory'>
+          <td>{{product.id}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.quantity}}</td>
+          <td>{{product.color}}</td>
+        </tr>
       </table>
     </main>
-    <footer></footer>
+    <footer>Why am I here?</footer>
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
     <script src='js/shopular.controller.js'></script>

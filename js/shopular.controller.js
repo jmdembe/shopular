@@ -4,6 +4,7 @@
     .controller('InventoryControl', InventoryControl);
 
   function InventoryControl() {
+    var tax = .0575;
     this.inventory = [
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
       { "id": 89274, "name": "golf club", "price": 98, "quantity": 10, "color": "black", "discount": 0 },
