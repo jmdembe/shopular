@@ -5,21 +5,22 @@
     <title>Shopular!</title>
   </head>
   <body>
-    <table>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Color</th>
-        <th>Discount</th>
-        <th>Sale</th>
-      </tr>
-    </table>
-
+    <header>Shopular!</header>
+    <main ng-controller='InventoryControl as item'>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Color</th>
+        </tr>
+        <tr></tr>
+      </table>
+    </main>
+    <footer></footer>
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
     <script src='js/shopular.controller.js'></script>
-
   </body>
 </html>
