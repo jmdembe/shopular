@@ -1,0 +1,22 @@
+{
+  "name": "shopular",
+  "version": "1.0.0",
+  "description": "My first Angular app!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmdembe/shopular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmdembe/shopular/issues"
+  },
+  "homepage": "https://github.com/jmdembe/shopular#readme",
+  "dependencies": {
+    "angular": "^1.5.9"
+  }
+}
