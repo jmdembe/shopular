@@ -5,7 +5,9 @@
     <title>Shopular!</title>
   </head>
   <body>
-    <header>Shopular!</header>
+    <header>
+      <h1>Shopular!</h1>
+    </header>
     <main ng-controller='InventoryControl as item'>
       <table>
         <tr>
@@ -18,13 +20,16 @@
         <tr ng-repeat='product in item.inventory'>
           <td>{{product.id}}</td>
           <td>{{product.name}}</td>
-          <td>{{product.price}}</td>
+          <td>{{((product.price*item.tax)-product.discount) | currency}}</td>
           <td>{{product.quantity}}</td>
           <td>{{product.color}}</td>
+          <td ng-if='product.discount !== 0'><img src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'></td>
         </tr>
       </table>
     </main>
-    <footer>Why am I here?</footer>
+    <footer>
+      <button>Click here if you are in the UK</button>
+    </footer>
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
     <script src='js/shopular.controller.js'></script>
