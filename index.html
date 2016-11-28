@@ -2,6 +2,7 @@
 <html ng-app='shopular'>
   <head>
     <meta charset="utf-8">
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
     <title>Shopular!</title>
   </head>
   <body>
@@ -20,10 +21,9 @@
         <tr ng-repeat='product in item.inventory'>
           <td>{{product.id}}</td>
           <td>{{product.name}}</td>
-          <td>{{((product.price*item.tax)-product.discount) | currency}}</td>
+          <td>{{((product.price*item.tax)-product.discount) | currency}}<img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/></td>
           <td>{{product.quantity}}</td>
           <td>{{product.color}}</td>
-          <td ng-if='product.discount !== 0'><img src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'></td>
         </tr>
       </table>
     </main>

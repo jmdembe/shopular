@@ -1,4 +1,12 @@
-h1 {
+table {
+  margin: 0 auto;
+  width: 80%;
+  border-color: #000000; }
+
+tr:nth-child(2n+1) {
+  background-color: #99CCFF; }
+
+td {
   text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
