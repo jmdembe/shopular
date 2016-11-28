@@ -1,0 +1,13 @@
+table {
+  margin: 0 auto;
+  width: 80%;
+  border-color: $border;
+}
+
+tr:nth-child(2n+1) {
+  background-color: $rowColor;
+}
+
+td {
+  text-align: $textAlign;
+}
