@@ -39,12 +39,8 @@
         class='add-product'
         ng-submit='addProduct.$valid && item.addProduct(item.itemToAdd)'>
         <h2>Add Item</h2>
-        <input
-          type='text'
-          name='name'
-          placeholder='Item name'
-          required
-          ng-model='item.itemToAdd.shopItem'>
+        <label for='name'>Product Name</label>
+        <input type='text' name='name' placeholder='Item name' required ng-model='item.itemToAdd.shopItem'>
       </form>
     </main>
     <footer>

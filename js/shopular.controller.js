@@ -5,6 +5,9 @@
 
   function InventoryControl() {
     this.tax = 1.0575;
+    this.product = [];
+    this.productToAdd= {};
+
     this.inventory = [
       { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
       { "id": 89274, "name": "golf club", "price": 98, "quantity": 10, "color": "black", "discount": 0 },
@@ -19,5 +22,16 @@
       { "id": 533, "name": "eggs", "price": 5, "quantity": 12, "color": "brown", "discount": 1 },
       { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
     ];
+
+    /**
+     * Adds new product upon submission
+     * @param {[type]} product [description]
+     */
+     function addProduct(product) {
+
+     };
+
   }
+
+
 }());
