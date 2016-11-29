@@ -27,8 +27,10 @@
      * Adds new product upon submission
      * @param {[type]} product [description]
      */
-     function addProduct(product) {
+     function addProducts(product) {
+       this.product.push({
 
+       })
      };
 
   }
