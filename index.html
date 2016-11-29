@@ -11,34 +11,44 @@
     </header>
     <main ng-controller='InventoryControl as item'>
       <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Color</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat='product in item.inventory'>
-          <td>{{product.id}}</td>
-          <td>{{product.name}}</td>
-          <td>
-            {{((product.price*item.tax)-product.discount) | currency}}
-            <img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
-          </td>
-          <td>{{product.quantity}}</td>
-          <td>{{product.color}}</td>
-        </tr>
-      </tbody>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='product in item.inventory'>
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>
+              {{((product.price*item.tax)-product.discount) | currency}}
+              <img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
+            </td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.color}}</td>
+          </tr>
+        </tbody>
       </table>
-
-      <form>
+      <form
+        novalidate
+        name='addProduct'
+        class='add-product'
+        ng-submit='addProduct.$valid && item.addProduct(item.itemToAdd)'>
+        <h2>Add Item</h2>
+        <input
+          type='text'
+          name='name'
+          placeholder='Item name'
+          required
+          ng-model='item.itemToAdd.shopItem'>
       </form>
     </main>
     <footer>
-      <button>Click here if you are in the UK</button>
+      <button>&copy; Shopular</button>
     </footer>
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
