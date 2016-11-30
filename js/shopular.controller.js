@@ -1,9 +1,9 @@
 (function() {
   'use strict';
   angular.module('shopular')
-    .controller('InventoryControl', InventoryControl);
+    .controller('ShopularController', ShopularController);
 
-  function InventoryControl() {
+  function ShopularController() {
     this.tax = 1.0575;
 
     this.inventory = [
@@ -20,6 +20,18 @@
       { "id": 533, "name": "eggs", "price": 5, "quantity": 12, "color": "brown", "discount": 1 },
       { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
     ];
+
+    this.productToAdd = {};
+
+    function addProducts(product) {
+      this.inventory.push({
+        name: product.name,
+        price: product.price,
+        quantity: product.quantity,
+        color: product.color,
+        discount: product.discount
+      })
+    }
   }
 
 
