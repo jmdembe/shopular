@@ -12,7 +12,14 @@ tr:nth-child(2n+1) {
 td {
   text-align: center; }
 
-button {
+form {
+  margin: 0 auto;
+  width: 85%; }
+
+h2 {
+  text-align: center; }
+
+p {
   text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -37,7 +37,6 @@
         novalidate
         name='addProduct'
         class='add-product'
-        ng-controller='StoreItemController as newProduct'
         ng-submit='addProduct.$valid && shopular.addProduct(shopular.productToAdd)'>
         <h2>Add Item</h2>
         <label for='name'>Product Name</label>
@@ -50,14 +49,15 @@
         <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.productToAdd.color'>
         <label for='discount'></label>
         <input type='text' name='productDiscount' placeholder='Discount' ng-model='shopular.productToAdd.discount'>
+        <input type='submit'>
       </form>
+
     </main>
     <footer>
-      <button>&copy; Shopular</button>
+      <p>&copy; Shopular</p>
     </footer>
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
     <script src='js/shopular.controller.js'></script>
-    <script src='js/storeItem.controller.js'></script>
   </body>
 </html>
