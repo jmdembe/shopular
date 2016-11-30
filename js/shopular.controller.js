@@ -23,24 +23,5 @@
           { "id": 683, "name": "pillow", "price": 27, "quantity": 10, "color": "black", "discount": 12 }
         ];
 
-        this.productToAdd = {};
-        var sortStyle = null;
-
-        /**
-         * Adds products on submission of the form
-         * @param {Object} product The new product to be added to the list
-         */
-        this.addProducts=function addProducts(product) {
-          console.log(product);
-          this.inventory.push({
-            id: Math.random(),
-            name: product.name,
-            price: product.price,
-            quantity: product.quantity,
-            color: product.color,
-            discount: product.discount
-          })
-        }
-
       }
 }());

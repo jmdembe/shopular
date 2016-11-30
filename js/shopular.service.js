@@ -14,16 +14,31 @@
           updateItems: updateItems
       }
 
-      function getAll() {
+      function getAllItems() {
           return storeItems;
       }
 
+      /**
+       * Adds products on submission of the form
+       * @param {Object} product The new product to be added to the list
+       */
+
       function saveItem(storeItem) {
+          storeItem.push({
+              id: Math.random(),
+              name: product.name,
+              price: product.price,
+              quantity: product.quantity,
+              color: product.color,
+              discount: product.discount
+            })
+          }
 
-      }
-
-      function updateItems(storeItem) {
-
+      function updateItems(id) {
+          var found = null;
+          storeItem.forEach(function findItem) {
+              
+          }
       }
     }
 }());
