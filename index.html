@@ -21,12 +21,12 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat='product in shopular.inventory'>
+          <tr ng-repeat='product in shopular.inventory | orderBy: "name"' >
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>
-              {{((product.price*shopular.tax)-product.discount) | currency }}
-              <img ng-hide='product.discount<==0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
+              {{((product.price*shopular.tax)-product.discount) | currency}}
+              <img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
             </td>
             <td>{{product.quantity}}</td>
             <td>{{product.color}}</td>
