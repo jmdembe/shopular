@@ -23,6 +23,10 @@
 
     this.productToAdd = {};
 
+    /**
+     * Adds products on submission of the form
+     * @param {Object} product The new product to be added to the list
+     */
     this.addProducts=function addProducts(product) {
       console.log(product);
       this.inventory.push({
