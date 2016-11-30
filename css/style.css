@@ -19,6 +19,9 @@ form {
 h2 {
   text-align: center; }
 
+.ng-invalid.ng-touched {
+  border: 2px solid #FF0026; }
+
 p {
   text-align: center; }
 

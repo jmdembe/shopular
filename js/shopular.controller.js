@@ -23,8 +23,10 @@
 
     this.productToAdd = {};
 
-    function addProducts(product) {
+    this.addProducts=function addProducts(product) {
+      console.log(product);
       this.inventory.push({
+        id: Math.random(),
         name: product.name,
         price: product.price,
         quantity: product.quantity,

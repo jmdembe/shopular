@@ -25,8 +25,8 @@
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>
-              {{((product.price*shopular.tax)-product.discount) | currency}}
-              <img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
+              {{((product.price*shopular.tax)-product.discount) | currency }}
+              <img ng-hide='product.discount<==0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
             </td>
             <td>{{product.quantity}}</td>
             <td>{{product.color}}</td>
@@ -37,17 +37,17 @@
         novalidate
         name='addProduct'
         class='add-product'
-        ng-submit='addProduct.$valid && shopular.addProduct(shopular.productToAdd)'>
+        ng-submit='addProduct.$valid && shopular.addProducts(shopular.productToAdd)'>
         <h2>Add Item</h2>
         <label for='name'>Product Name</label>
-        <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.productToAdd.itemId'>
+        <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.productToAdd.name'>
         <label for='price'>Price</label>
         <input type='text' name='productPrice' placeholder='Item Price' required ng-model='shopular.productToAdd.price'>
-        <label for='quantity'></label>
+        <label for='quantity'>Quantity</label>
         <input type='text' name='productQuantity' placeholder='Quantity' required ng-model='shopular.productToAdd.quantity'>
-        <label for='color'></label>
+        <label for='color'>Color</label>
         <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.productToAdd.color'>
-        <label for='discount'></label>
+        <label for='discount'>Discount</label>
         <input type='text' name='productDiscount' placeholder='Discount' ng-model='shopular.productToAdd.discount'>
         <input type='submit'>
       </form>

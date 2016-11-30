@@ -6,3 +6,7 @@ form {
 h2 {
   text-align: $textAlign;
 }
+
+.ng-invalid.ng-touched {
+  border: $borderSize solid $warningColor;
+}
