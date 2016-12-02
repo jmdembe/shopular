@@ -21,7 +21,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat='product in shopular.inventory | orderBy: "name"' >
+          <tr ng-repeat='product in shopular.productToAdd | orderBy: "name"' >
             <td>{{product.id}}</td>
             <td>{{product.name}}</td>
             <td>
@@ -37,18 +37,19 @@
         novalidate
         name='addProduct'
         class='add-product'
-        ng-submit='addProduct.$valid && shopular.addProducts(shopular.productToAdd)'>
+        ng-submit='addProduct.$valid && shopular.productToAdd(shopular.product)'
+        >
         <h2>Add Item</h2>
         <label for='name'>Product Name</label>
-        <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.productToAdd.name'>
+        <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.product.name'>
         <label for='price'>Price</label>
-        <input type='text' name='productPrice' placeholder='Item Price' required ng-model='shopular.productToAdd.price'>
+        <input type='text' name='productPrice' placeholder='Item Price' required ng-model='shopular.product.price'>
         <label for='quantity'>Quantity</label>
-        <input type='text' name='productQuantity' placeholder='Quantity' required ng-model='shopular.productToAdd.quantity'>
+        <input type='text' name='productQuantity' placeholder='Quantity' required ng-model='shopular.product.quantity'>
         <label for='color'>Color</label>
-        <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.productToAdd.color'>
+        <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.product.color'>
         <label for='discount'>Discount</label>
-        <input type='text' name='productDiscount' placeholder='Discount' ng-model='shopular.productToAdd.discount'>
+        <input type='text' name='productDiscount' placeholder='Discount' ng-model='shopular.product.discount'>
         <input type='submit'>
       </form>
 
