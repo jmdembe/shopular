@@ -9,7 +9,7 @@
       var storeItems = [];
       var newItem = {};
 
-      this.inventory = [
+      var inventory = [
         { "id": 2957, "name": "widget", "price": 32, "quantity": 203, "color": "red", "discount": 31 },
         { "id": 89274, "name": "golf club", "price": 98, "quantity": 10, "color": "black", "discount": 0 },
         { "id": 64, "name": "iPhone", "price": 499, "quantity": 2, "color": "white", "discount": 0 },
@@ -27,7 +27,8 @@
       return {
           getAll: getAll,
           saveItem: saveItem,
-          updateItems: updateItems
+          updateItems: updateItems,
+          productToAdd: productToAdd
       }
 
       function getAllItems() {
@@ -40,24 +41,36 @@
        */
 
       function productToAdd(product) {
-          console.log(product);
-          newItem = {
-              id: Math.random(),
-              name: product.name,
-              price: product.price,
-              quantity: product.quantity,
-              color: product.color,
-              discount: product.discount
-            }
-          this.inventory.push(newItem);
-          return this.inventory;
+        console.log(product);
+        newItem = {
+            id: Math.random(),
+            name: product.name,
+            price: product.price,
+            quantity: product.quantity,
+            color: product.color,
+            discount: product.discount
           }
+        console.log(inventory);
+        inventory.push(newItem);
+        return inventory;
+        }
 
-      function updateItems(id) {
-          var found = null;
-          storeItem.forEach(function myItem) {
+      // function updateItems(id) {
+      //     var found = null;
+      //     storeItem.forEach(function myItem) {
+      //
+      //     }
+      // }
+      function getAll() {
+        console.log('I exist now.');
+      }
 
-          }
+      function saveItem() {
+        console.log('I exist too.');
+      }
+
+      function updateItems() {
+        console.log('I exist three.');
       }
     }
 }());
