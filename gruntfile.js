@@ -23,7 +23,8 @@ module.exports = function(grunt) {
       registrar: {
           options: {
               files: [
-                  'node_modules/angular/angular.js'
+                  'node_modules/angular/angular.js',
+                  'node_modules/angular-mocks.js'
               ]
           }
       }
