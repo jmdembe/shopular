@@ -9,6 +9,11 @@
     function ShopularController(ShopularService) {
         this.product = {};
         this.tax = 1.0575;
-        this.productToAdd = ShopularService.productToAdd(this.product);
+
+        this.productInventory = ShopularService.getAllItems();
+
+        this.productToAdd = function productToAdd (product) {
+          ShopularService.productToAdd(product);
+        };
       }
 }());

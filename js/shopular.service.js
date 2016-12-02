@@ -25,14 +25,14 @@
       ];
 
       return {
-          getAll: getAll,
+          getAllItems: getAllItems,
           saveItem: saveItem,
           updateItems: updateItems,
           productToAdd: productToAdd
       }
 
       function getAllItems() {
-          return storeItems;
+          return inventory;
       }
 
       /**
@@ -43,7 +43,7 @@
       function productToAdd(product) {
         console.log(product);
         newItem = {
-            id: Math.random(),
+            id: Date.now(),
             name: product.name,
             price: product.price,
             quantity: product.quantity,
@@ -61,16 +61,6 @@
       //
       //     }
       // }
-      function getAll() {
-        console.log('I exist now.');
-      }
 
-      function saveItem() {
-        console.log('I exist too.');
-      }
-
-      function updateItems() {
-        console.log('I exist three.');
-      }
     }
 }());
