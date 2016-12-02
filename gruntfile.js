@@ -20,11 +20,14 @@ module.exports = function(grunt) {
             }
         },
 
-      registrar: {
+      shopular: {
           options: {
               files: [
                   'node_modules/angular/angular.js',
-                  'node_modules/angular-mocks.js'
+                  'node_modules/angular-mocks.js',
+                  'src/js/shopular.module.js',
+                  'src/js/shopular.controller.js',
+                  'src/js/shopular.service.js',
               ]
           }
       }
