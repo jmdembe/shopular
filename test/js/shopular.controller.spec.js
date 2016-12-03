@@ -15,6 +15,27 @@
         it('Should be able to retrieve an array of inventory items', function (){
             var result = ShopularService.getAllItems();
             expect(result).to.be.an('array');
+            expect(result.length).to.equal(12);
+        });
+
+        it('Should be able to add a new inventory item', function (){
+            var result = ShopularService.productToAdd({
+              name: 'jello',
+              price: '.99',
+              quantity: 8456785,
+              color: 'orange',
+              discount: 0
+            });
+            expect(result).to.be.an('array');
+            var inventory = ShopularService.getAllItems();
+            console.log(inventory);
+        });
+
+        it('Should fail if the user does not provide all required items', function (){
+            ShopularService.productToAdd('meep');
+            var result = ShopularService.getAllItems();
+            expect(result.length).to.equal(12);
+
         });
     });
 })();

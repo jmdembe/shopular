@@ -5,7 +5,6 @@
 
     function ShopularService() {
 
-      console.log("I'm here!");
       var storeItems = [];
       var newItem = {};
 
@@ -41,6 +40,9 @@
 
       function productToAdd(product) {
         console.log(product);
+        if (!product || !product.name || !product.price || !product.quantity || !product.color) {
+          return;
+        }
         newItem = {
             id: Date.now(),
             name: product.name,
