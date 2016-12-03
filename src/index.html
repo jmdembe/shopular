@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='shopular'>
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='css/style.css' type='text/css'>
+    <title>Shopular!</title>
+  </head>
+  <body>
+    <header>
+      <h1>Shopular!</h1>
+    </header>
+    <main ng-controller='ShopularController as shopular'>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='product in shopular.productInventory | orderBy: "name"' >
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>
+              {{((product.price*shopular.tax)-product.discount) | currency}}
+              <img ng-hide='product.discount===0' src='https://tiy-learn-content.s3.amazonaws.com/98350f05-sale_2.png'/>
+            </td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.color}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <form
+        novalidate
+        name='addProduct'
+        class='add-product'
+        ng-submit='addProduct.$valid && shopular.productToAdd(shopular.product)'
+        >
+        <h2>Add Item</h2>
+        <label for='name'>Product Name</label>
+        <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.product.name'>
+        <label for='price'>Price</label>
+        <input type='text' name='productPrice' placeholder='Item Price' required ng-model='shopular.product.price'>
+        <label for='quantity'>Quantity</label>
+        <input type='text' name='productQuantity' placeholder='Quantity' required ng-model='shopular.product.quantity'>
+        <label for='color'>Color</label>
+        <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.product.color'>
+        <label for='discount'>Discount</label>
+        <input type='text' name='productDiscount' placeholder='Discount' ng-model='shopular.product.discount'>
+        <input type='submit'>
+      </form>
+
+    </main>
+    <footer>
+      <p>&copy; Shopular</p>
+    </footer>
+    <script src='node_modules/angular/angular.js'></script>
+    <script src='js/shopular.module.js'></script>
+    <script src='js/shopular.controller.js'></script>
+    <script src='js/shopular.service.js'></script>
+  </body>
+</html>
