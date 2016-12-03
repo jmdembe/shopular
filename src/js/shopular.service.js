@@ -26,9 +26,8 @@
 
       return {
           getAllItems: getAllItems,
-          saveItem: saveItem,
-          updateItems: updateItems,
-          productToAdd: productToAdd
+          productToAdd: productToAdd,
+          // updateItems: updateItems,
       }
 
       function getAllItems() {
