@@ -21,19 +21,20 @@
         it('Should be able to add a new inventory item', function (){
             var result = ShopularService.productToAdd({
               name: 'jello',
-              price: '.99',
+              price: .99,
               quantity: 8456785,
               color: 'orange',
               discount: 0
             });
             expect(result).to.be.an('array');
             var inventory = ShopularService.getAllItems();
-            console.log(inventory);
+            expect(inventory[12].name).to.equal('jello');
         });
 
         it('Should fail if the user does not provide all required items', function (){
             ShopularService.productToAdd('meep');
             var result = ShopularService.getAllItems();
+            console.log(result);
             expect(result.length).to.equal(12);
 
         });

@@ -39,8 +39,7 @@
        */
 
       function productToAdd(product) {
-        console.log(product);
-        if (!product || !product.name || !product.price || !product.quantity || !product.color) {
+        if (typeof(product)!=='object') {
           return;
         }
         newItem = {
@@ -51,7 +50,6 @@
             color: product.color,
             discount: product.discount
           }
-        console.log(inventory);
         inventory.push(newItem);
         return inventory;
         }
