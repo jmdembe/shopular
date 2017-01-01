@@ -1,5 +1,5 @@
 #Shopular
-Shopular is an web application made in Angular JS. This app was created on November 26, 2016.
+Shopular is an Angular JS web application. This app was first created on November 26, 2016.
 
 
 #Purpose

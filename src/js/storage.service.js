@@ -37,7 +37,7 @@
     }
 
     /**
-     * This function updates the items in the story inventory.
+     * This function updates the items in the story inventory. This func
      * @return {VOID}
      */
     function updateItems() {
@@ -45,7 +45,7 @@
     }
 
     /**
-     * Adds products on submission of the form
+     * Adds store products on submission of the form from index
      * @param {Object} product The new product to be added to the list
      */
 
