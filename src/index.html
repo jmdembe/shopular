@@ -43,9 +43,9 @@
         <label for='name'>Product Name</label>
         <input type='text' name='productName' placeholder='Item name' required ng-model='shopular.product.name'>
         <label for='price'>Price</label>
-        <input type='text' name='productPrice' placeholder='Item Price' required ng-model='shopular.product.price'>
+        <input type='number' name='productPrice' placeholder='Item Price' required ng-model='shopular.product.price'>
         <label for='quantity'>Quantity</label>
-        <input type='text' name='productQuantity' placeholder='Quantity' required ng-model='shopular.product.quantity'>
+        <input type='number' name='productQuantity' placeholder='Quantity' required ng-model='shopular.product.quantity'>
         <label for='color'>Color</label>
         <input type='text' name='productColor' placeholder='Color' required ng-model='shopular.product.color'>
         <label for='discount'>Discount</label>
@@ -60,6 +60,6 @@
     <script src='node_modules/angular/angular.js'></script>
     <script src='js/shopular.module.js'></script>
     <script src='js/shopular.controller.js'></script>
-    <script src='js/shopular.service.js'></script>
+    <script src='js/storage.service.js'></script>
   </body>
 </html>
