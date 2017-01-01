@@ -2,6 +2,17 @@
 
 module.exports = function(grunt) {
     grunt.initConfig({
+        jshint: {
+          options: {
+            jshintrc: '.jshintrc',
+            ignores: ['node_modules/**']
+          },
+          source: {
+            files: {
+              src: ['src/client/js/**/*.js']
+            }
+          }
+        },
         karma: { // task name
             options: {
               frameworks: ['mocha', 'chai'],
@@ -28,8 +39,9 @@ module.exports = function(grunt) {
                         'node_modules/angular-mocks/angular-mocks.js',
                         'src/js/shopular.module.js',
                         'src/js/shopular.controller.js',
-                        'src/js/shopular.service.js',
-                        'test/js/shopular.controller.spec.js'
+                        'src/js/storage.service.js',
+                        'test/js/shopular.controller.spec.js',
+                        'test/js/shopular.service.spec.js'
                     ]
                 }
             }
