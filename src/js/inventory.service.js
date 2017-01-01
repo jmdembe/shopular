@@ -5,6 +5,8 @@
 
     function InventoryService() {
 
+      var tax = 1.
+
       var storeItems = [];
       var newItem = {};
 
@@ -39,13 +41,6 @@
         inventory.push(newItem);
         return inventory;
         }
-
-      // function updateItems(id) {
-      //     var found = null;
-      //     storeItem.forEach(function myItem) {
-      //
-      //     }
-      // }
 
     }
 }());

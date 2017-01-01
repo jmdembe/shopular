@@ -23,8 +23,25 @@
 
     return {
       getAll: getAll,
-      newItem: newItem,
-      updateItem: updateItem
+      updateItems: updateItems,
+      newItem
+    };
+
+    /**
+     * This function gets all the items in the store inventory. The function returns the
+     * items as an array.
+     * @return {Array} Inventory items
+     */
+    function getAll() {
+      return inventory;
+    }
+
+    /**
+     * This function updates the items in the story inventory.
+     * @return {VOID}
+     */
+    function updateItems() {
+      window.localStorage.setItem('inventory', angular.toJson(inventory));
     }
   }
 }());
