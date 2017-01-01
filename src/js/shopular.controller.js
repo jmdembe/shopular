@@ -4,16 +4,16 @@
     angular.module('shopular')
         .controller('ShopularController', ShopularController);
 
-    ShopularController.$inject = ['ShopularService'];
+    ShopularController.$inject = ['StorageService'];
 
-    function ShopularController(ShopularService) {
+    function ShopularController(StorageService) {
         this.product = {};
         this.tax = 1.0575;
 
-        this.productInventory = ShopularService.getAllItems();
+        this.productInventory = StorageService.getAllItems();
 
         this.productToAdd = function productToAdd (product) {
-          ShopularService.productToAdd(product);
+          StorageService.productToAdd(product);
         };
       }
 }());
